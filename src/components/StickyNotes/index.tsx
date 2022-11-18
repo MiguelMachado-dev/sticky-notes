@@ -1,4 +1,4 @@
-import { useRef, useState, TouchEvent } from 'react'
+import { useRef, useState } from 'react'
 
 import { SelectionBackground, X } from 'phosphor-react'
 
@@ -53,8 +53,6 @@ const StickyNote = ({
 
     stickyNoteRef.current.style.left = x + 'px'
     stickyNoteRef.current.style.top = y + 'px'
-
-    document.elementFromPoint(x, y)
 
     if (x <= 80 && y <= 80) {
       stickyNoteRef.current.style.backgroundColor = 'red'
